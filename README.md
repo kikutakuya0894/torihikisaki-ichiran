@@ -1,3 +1,22 @@
 # 社内システム【取引先情報一覧】
 インターンシップ先でチーム開発で担当したページです。<br>
-登録した取引先の検索や削除ができます。
+登録した取引先の検索や削除ができます。<br>
+
+
+# 使用技術
+・Java <br>
+・Spring Boot <br>
+・thymeleaf <br>
+
+# 機能
+【取引先情報の検索機能】 <br>
+検索項目に一致した取引先情報をデータベースから取得して表示します。
+
+【初期画面】
+![](images/torisikiski_toroku_shoki_gamen.PNG "")
+
+【無条件検索画面1ページ目】
+![](images/torisikiski_toroku_kensaku_mujoken.PNG "")
+
+【無条件検索画面2ページ目】
+![](images/torisikiski_toroku_kensaku_mujoken2.PNG "")

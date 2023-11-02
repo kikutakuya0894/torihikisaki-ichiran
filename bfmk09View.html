@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{mscln00}"></title>
+
+<link rel="stylesheet" th:href="@{/css/bfmk09View.css}">
+</head>
+<body>
+
+	<div align="center" th:object="${bfmk09Form}">
+
+		<!------------ 検索フォーム ------------->
+
+		<form th:action="@{209}" method="post" id="form">
+			<table class="form-table" border="1">
+				<tr class="form-tr">
+					<td class="td-header" th:text="#{mscln01}"></td>
+					<td class="td-content">
+						<input type="text" name="customer_id" class="input-id"
+							th:field="*{customerId}">
+					</td>
+				</tr>
+
+				<tr class="form-tr">
+					<td th:text="#{mscln02}"></td>
+					<td>
+						<input type="text" name="customer_name" class="input-name"
+							th:field="*{customerName}">
+					</td>
+				</tr>
+
+				<tr class="form-tr">
+					<td th:text="#{mscln03}"></td>
+					<td>
+						<input type="checkbox" id="customer_div1" name="customer_div"
+							value="1" class="check-box" th:field="*{customerDiv}">
+						<label for="customer_div1" th:text="#{mscln04}"></label>
+
+						<input type="checkbox" id="customer_div2" name="customer_div"
+							value="2" class="check-box" th:field="*{customerDiv}">
+						<label for="customer_div2" th:text="#{mscln05}"></label>
+
+						<input type="checkbox" id="customer_div3" name="customer_div"
+							value="3" class="check-box" th:field="*{customerDiv}">
+						<label for="customer_div3" th:text="#{mscln06}"></label>
+					</td>
+				</tr>
+
+				<tr class="form-tr">
+					<td th:text="#{mscln07}"></td>
+					<td>
+						<input type="date" name="promise_strt_date" class="input-date"
+							th:field="*{promiseStrtDate}">
+						<span class="date-span">～</span>
+						<input type="date" name="promise_end_date" class="input-date"
+							th:field="*{promiseEndDate}">
+					</td>
+				</tr>
+			</table>
+
+			<div>
+				<button type="submit" name="back" class="left form-left-button"
+					th:text="#{mscln08}"></button>
+				<span class="message" th:if="${message}" th:text="${message}"></span>
+				<span class="error message" th:if="${error}" th:text="${error}"></span>
+				<button type="submit" name="clear" class="right form-right-button"
+					th:text="#{mscln09}"></button>
+				<input type="submit" th:value="#{mscln11}" class="right input-submit">
+			</div>
+
+			<!---------------- 検索結果 ----------------->
+
+			<div class="search-view" th:if="${searchList}">
+
+				<div class="pagination" th:if="${searchList}">
+					<input type="submit" name="delete" th:value="#{mscln10}"
+						class="left delete-btn">
+
+					<!-- ページ情報 -->
+					<input type="hidden" name="startPage" th:value="0">
+					<input type="hidden" name="endPage"
+						th:value="${pages.getPageCount()-1}">
+					<input type="hidden" name="nextPage" th:value="${pages.getPage() + 1}">
+					<input type="hidden" name="prevPage" th:value="${pages.getPage() - 1}">
+
+					<!-- ページ遷移 -->
+					<button type="submit" name="start_page">←</button>
+					<button th:type="${pages.isFirstPage()} ? 'button' : 'submit'"
+						name="prev_page">|←</button>
+					<span>[[${pages.getPage() + 1}]]/[[${pages.getPageCount()}]]</span>
+					<button th:type="${pages.isLastPage()} ? 'button' : 'submit'"
+						name="next_page">→|</button>
+					<button type="submit" name="end_page">→</button>
+					<span>[[#{mscln12}]]：[[${pages.getNrOfElements()}]]</span>
+				</div>
+
+				<table class="stripe-table" border="1">
+					<tr class="text-center">
+						<td class="td-width-1"></td>
+						<td class="td-width-1" th:text="#{mscln01}"></td>
+						<td class="td-width-4" th:text="#{mscln02}"></td>
+						<td class="td-width-2" th:text="#{mscln03}"></td>
+						<td class="td-width-3" th:text="#{mscln04}"></td>
+						<td class="td-width-3" th:text="#{mscln05}"></td>
+					</tr>
+
+					<tr class="text-center" th:each="search : ${searchList}">
+						<td>
+							<input type="checkbox" class="check-box check-box-lg"
+								name="delete_id" th:value="${search.customerId}">
+						</td>
+						<td>
+							<a th:href="@{208(customer_id = ${search.customerId})}"
+								th:text="${search.customerId}"></a>
+						</td>
+						<td th:text="${search.customerName}"></td>
+						<td th:text="${search.customerDiv}"></td>
+						<td th:text="${search.promiseStrtDate}"></td>
+						<td th:text="${search.promiseEndDate}"></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

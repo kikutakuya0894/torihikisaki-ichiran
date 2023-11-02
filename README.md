@@ -1,1 +1,1 @@
-# torihikisaki-ichiran
+# 社内システム【取引先情報一覧】

@@ -19,21 +19,30 @@
 【取引先情報の検索機能】 <br>
 検索項目に一致した取引先情報をデータベースから取得して表示します。
 
-
 【初期画面】
-![](images/torisikiski_toroku_shoki_gamen.PNG "")
+![](images/torisikiski_toroku_shoki_gamen.PNG)
 
 【無条件検索画面1ページ目】
-![](images/torisikiski_toroku_kensaku_mujoken.PNG "")
+![](images/torisikiski_toroku_kensaku_mujoken.PNG)
 
 【無条件検索画面2ページ目】
-![](images/torisikiski_toroku_kensaku_mujoken2.PNG "")
+![](images/torisikiski_toroku_kensaku_mujoken2.PNG)
 
 【ID検索】
-![](images/torisikiski_toroku_kensaku_id.PNG "")
+![](images/torisikiski_toroku_kensaku_id.PNG)
 
 【エラー画面（有効日エラー時）】
 ![](images/torisikiski_toroku_kensaku_error1.PNG)
 
 【エラー画面（検索結果なし時）】
 ![](images/torisikiski_toroku_kensaku_error2.PNG)
+<br>
+<br>
+【取引先情報の削除機能】 <br>
+選択した取引先情報をデータベースから削除します。(複数可)
+
+【削除成功時の画面】
+![](images/torisikiski_toroku_sakujo_message.PNG)
+
+【削除失敗時の画面（チェックボックス未選択）】
+![](images/torisikiski_toroku_sakujo_error.PNG)

@@ -28,3 +28,12 @@
 
 【無条件検索画面2ページ目】
 ![](images/torisikiski_toroku_kensaku_mujoken2.PNG "")
+
+【ID検索】
+![](images/torisikiski_toroku_kensaku_id.PNG "")
+
+【エラー画面（有効日エラー時）】
+![](images/torisikiski_toroku_kensaku_error1.PNG)
+
+【エラー画面（検索結果なし時）】
+![](images/torisikiski_toroku_kensaku_error2.PNG)

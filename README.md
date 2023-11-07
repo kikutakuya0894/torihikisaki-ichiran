@@ -32,16 +32,16 @@
 【ID検索】
 ![](images/torisikiski_toroku_kensaku_id.PNG)
 
-【エラー画面（有効日エラー時）】
+【エラー画面（有効日エラー）】
 ![](images/torisikiski_toroku_kensaku_error1.PNG)
 
-【エラー画面（検索結果なし時）】
+【エラー画面（検索結果なし）】
 ![](images/torisikiski_toroku_kensaku_error2.PNG)
 <br>
 <br>
 <br>
 ・取引先情報の削除機能 <br>
-選択した取引先情報をデータベースから削除します。(複数可)<br>
+選択した取引先情報を取引先情報リストから削除します。(複数可)<br>
 
 【削除成功時の画面】
 ![](images/torisikiski_toroku_sakujo_message.PNG)

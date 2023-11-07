@@ -7,6 +7,7 @@
 ・Java <br>
 ・Spring Boot <br>
 ・Thymeleaf<br>
+・MySQL<br>
 
 # こだわったポイント
 　コメントを忘れずに書くことや1文づつの改行を統一をするなど、<br>
